@@ -1,0 +1,183 @@
+/* =========================================
+   Variables globales
+   ========================================= */
+:root {
+    --odoo-primary: #714B67;
+    --odoo-secondary: #017E84;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+}
+
+/* =========================================
+   Reset básico
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+/* =========================================
+   Bloque: Header
+   ========================================= */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    color: var(--odoo-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Bloque: Nav */
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--odoo-primary);
+}
+
+/* =========================================
+   Bloque: Hero
+   ========================================= */
+.hero {
+    background: linear-gradient(135deg, var(--odoo-primary) 0%, #4a3143 100%);
+    color: var(--white);
+    padding: 5rem 20px;
+    text-align: center;
+}
+
+.hero__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero__title {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero__description {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+/* =========================================
+   Bloque: Botones (Componente reutilizable)
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn--primary {
+    background-color: var(--odoo-secondary);
+    color: var(--white);
+}
+
+.btn--primary:hover {
+    background-color: #01656a;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   Bloque: Servicios
+   ========================================= */
+.services {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+.services__title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--odoo-primary);
+    margin-bottom: 3rem;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Bloque: Service Card */
+.service-card {
+    background-color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid var(--odoo-secondary);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card__title {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.service-card__desc {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* =========================================
+   Bloque: Footer
+   ========================================= */
+.footer {
+    background-color: #2b2b2b;
+    color: #999;
+    padding: 2rem 20px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer__text {
+    font-size: 0.9rem;
+}
